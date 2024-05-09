@@ -12,3 +12,4 @@ plantsGrownPerWeek = 2^x * week#
 
 # Step 3
 implement control flow for pruned/monitored/planted 
+ 

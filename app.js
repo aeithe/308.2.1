@@ -22,7 +22,10 @@ function weeklyPlantCalc (weekNum){
 weeklyPlantCalc(2);
 
 if (weekNum <3){
-    console.log("The plants all fit inside the starting area at this time")
+    console.log("The plants all fit inside the starting area at this time and more can be planted")
+}
+if (weekNum=3){
+    console.log("The plants")
 }
 else {
     console.log("The plants will not fit inside the starting area at this time")
