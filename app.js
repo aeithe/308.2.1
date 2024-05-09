@@ -11,18 +11,17 @@ const startingPlantAmmount = 20;
 //not big enough to support more than 2 weeks of growth  bc 3 weeks = 80
 //total # of plants cannot exceeed 98 
 
+
+function weeklyPlantCalc (weekNum, num1){
+        console.log(weekNum*num1);
+
+    }
 let weekNum = 1;
 const num1 = 20;
-function weeklyPlantCalc (weekNum, operator, num1){
-    if (operator === "*"){
-        let value = 1;
-        console.log(value);
-    }
-}
+//this is how to calculate how many plants are in week 1
+//weeklyPlantCalc(1,20,"*");
 
-weeklyPlantCalc(weekNum, num1, "*");
+//this is how to calculate how many plants are in week 2 
+let weekNum = 2;
 
-
-
-
-
+weeklyPlantCalc(num1,weekNum);
