@@ -4,6 +4,9 @@ const area = PI * radius * radius;
 const plantSpace = 0.8; 
 const totalAmountofPlants = area / plantSpace;
 const startingPlantAmmount = 20; 
+const startingPlants2 = 100;
+const noPruningWeeks = 10;
+
 //calculating total amount of plants possible in starting area
 //console.log(totalAmountofPlants);
 
@@ -33,6 +36,42 @@ function weeklyPlantCalc (weekNum){
     weeklyPlantCalc(3); //Simulates growth for week #3
 
 
+const plantCount2 = startingPlants2 * Math.pow(2,10);
+const requiredSpace = plantCount2 * plantSpace
+
+function additionalSpace(){
+
+  let newRadius = 0;
+  let increment = 0.01; 
+  let currentArea = 0;
+
+  while (currentArea <requiredSpace) {
+    newRadius += increment; 
+    currentArea = PI*newRadius*newRadius;
+    
+    newRadius -= increment;
+    
+  console.log (`After 10 weeks, with 100 starting plants, the required space is ${requiredSpace} sq meters and the new radius is ${newRadius.toFixed(2)} meters.`);
+  }
+}
+
+additionalSpace();
+
+function gardenCapacity(){
+try {
+  if (requiredSpace > area){
+    throw new Error("Not enough space for the desired number of plants.");
+  }
+  console.log(
+    "There is enough space in the garden for the plants.");
+}
+catch (error){
+  console.log(error.message);
+}
+}
+gardenCapacity();
+
+    //ignore what's below this line!!!!
 //change number inside parenthesis to whatever week number you want to fix    
 //weeklyPlantCalc(2);
 
@@ -50,6 +89,16 @@ function weeklyPlantCalc (weekNum){
 //const planted = totalAmountofPlants*.50;
 
 //console.log(pruned, planted);
+
+//ignore what's above this line!!!
+
+//second problem in assignment below:
+
+
+
+
+
+
 
 
 
