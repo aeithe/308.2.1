@@ -21,12 +21,16 @@ function weeklyPlantCalc (weekNum){
       const plantCount = startingPlantAmmount * Math.pow(2,weekNum);
 
       if (plantCount > totalAmountofPlants * 0.8){
-        console.log(`Week ${weekNum}: The plants need to be pruned this week.`);        
-      } else if (plantCount >= totalAmountofPlants * 0.5 && 
+        console.log(`Week ${weekNum}: The plants need to be pruned this week. There are ${plantCount} plants.`);        
+      } 
+      
+      else if (plantCount >= totalAmountofPlants * 0.5 && 
                  plantCount <= totalAmountofPlants * 0.8
       )
       {console.log(`Week ${weekNum}: The plants are growing at an acceptable rate.`);
     }
+
+
         else{ console.log(`Week ${weekNum}: There is room in the garden for plants to be planted.`);}    
     
     }
@@ -37,7 +41,12 @@ function weeklyPlantCalc (weekNum){
 
 
 const plantCount2 = startingPlants2 * Math.pow(2,10);
-const requiredSpace = plantCount2 * plantSpace
+
+console.log(plantCount2);
+
+const requiredSpace2 = plantCount2 * plantSpace;
+
+
 
 function additionalSpace(){
 
@@ -45,18 +54,21 @@ function additionalSpace(){
   let increment = 0.01; 
   let currentArea = 0;
 
-  while (currentArea <requiredSpace) {
+  while (currentArea < requiredSpace2) {
     newRadius += increment; 
-    currentArea = PI*newRadius*newRadius;
+    currentArea = PI * newRadius * newRadius;}
     
-    newRadius -= increment;
-    
-  console.log (`After 10 weeks, with 100 starting plants, the required space is ${requiredSpace} sq meters and the new radius is ${newRadius.toFixed(2)} meters.`);
-  }
+
+newRadius -= increment;
+
+  console.log (`After 10 weeks, with 100 starting plants, the required space is ${requiredSpace2} sq meters and the new radius is ${newRadius.toFixed(2)} meters.`);
+
 }
+
 
 additionalSpace();
 
+/**
 function gardenCapacity(){
 try {
   if (requiredSpace > area){
@@ -69,7 +81,8 @@ catch (error){
   console.log(error.message);
 }
 }
-gardenCapacity();
+ */
+//gardenCapacity();
 
     //ignore what's below this line!!!!
 //change number inside parenthesis to whatever week number you want to fix    
